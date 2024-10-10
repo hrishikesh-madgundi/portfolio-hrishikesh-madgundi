@@ -1,0 +1,119 @@
+/* Text animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+/* Apply animation to h1 */
+.animated-text {
+  display: inline-block;
+  overflow: hidden; /* Ensures the text stays within its bounds */
+  white-space: nowrap; /* Prevents text from wrapping */
+  border-right: 3px solid; /* Typing cursor effect */
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  color: black;
+  line-height: 1.5;
+  font-size: 2.5rem; /* Default font size */
+  max-width: 100%; /* Prevents overflow */
+}
+
+/* Animation for paused state */
+.animated-text.paused {
+  animation: none; /* Remove typing animation when paused */
+  border-right: none; /* Remove the blinking cursor */
+}
+
+/* Responsive text size for animated text */
+@media (max-width: 768px) {
+  .animated-text {
+      font-size: 2rem; /* Slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+      font-size: 1.75rem; /* Smaller size for mobile */
+  }
+}
+
+/* Profile Picture */
+.profile-picture {
+  width: 100%; /* Makes the image responsive */
+  max-width: 22rem; /* Limits the maximum width */
+  height: auto; /* Keeps the aspect ratio */
+  border-radius: 50%; /* Ensures circular shape */
+}
+
+/* Layout adjustments */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* Adds space between items */
+}
+
+/* Stack items vertically on smaller screens */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text and image */
+  }
+
+  .profile-picture {
+      max-width: 25rem; /* Adjust size for smaller screens */
+      margin-bottom: 2rem; /* Space between image and text */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-picture {
+      max-width: 20rem; /* Further adjust size for very small screens */
+  }
+}
+
+/* Footer adjustments */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.875rem; /* Slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.75rem; /* Further smaller for mobile */
+  }
+}
+
+/* Responsive paragraph text */
+p {
+  font-size: 1.1rem; /* Default size */
+  color: white;
+  max-width: 100%; /* Ensures it doesn't overflow */
+  word-wrap: break-word; /* Wraps long lines */
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 1.1rem; /* Slightly smaller on tablet screens */
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 0.85rem; /* Smaller on mobile screens */
+    color: white;
+  }
+}
