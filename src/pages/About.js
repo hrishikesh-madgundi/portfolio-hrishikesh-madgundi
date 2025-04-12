@@ -15,7 +15,7 @@ const About = () => (
         <div className="w-full lg:w-1/2">
           <div className="border-dashed border-2 border-black relative rounded-lg shadow-lg overflow-hidden">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D22AQGL9wXNiN05GQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1685352973563?e=1730332800&v=beta&t=2jSeKxZ2jAjxYzBbztWIZ4IAt7aki_p1B-P-guBQ_ro"
+              src="https://media.licdn.com/dms/image/v2/D4D22AQGL9wXNiN05GQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1685352973563?e=1747267200&v=beta&t=rWVJwQnklbVciPjpPRVUPjN7O7c9hWgbmu22nOYA3dA"
               alt="Hrishikesh Madgundi"
               className="object-cover w-full h-full"
             />

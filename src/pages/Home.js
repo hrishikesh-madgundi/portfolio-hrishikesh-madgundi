@@ -43,7 +43,7 @@ const Home = () => {
       {/* Profile Picture */}
       <div className="rounded-full border-gray-800 ml-8 ">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4D03AQGnmEnlGNvt3w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692136924292?e=1732147200&v=beta&t=J6xt3pWJhLH5V4yzm-WYgfFkEVv_CAWI8tkzK2jlMPA"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQGnmEnlGNvt3w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692136924292?e=1749686400&v=beta&t=Vliy5GP2b3dSBPIxI2YgyxXvgoH8j1rXmqV6vqLfTIQ"
           alt="Profile"
           className="profile-picture border-dashed border-8 border-black" /* Updated className */
         />

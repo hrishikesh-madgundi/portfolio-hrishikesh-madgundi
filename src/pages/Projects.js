@@ -3,9 +3,9 @@ import ProjectCard from '../components/ProjectCard';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'Description for project one.',
-    githubLink: 'https://github.com/username/project-one',
+    title: 'Youtube Clone App',
+    description: 'A yotube clone app with the replica of YouTube Ui/Ux made using Tailwind CSS and ReactJS, Axios for fetching the APIs, and Redux for state management',
+    githubLink: 'https://github.com/hrishikesh-madgundi/react-youtube-clone',
   },
   {
     title: 'Project Two',
