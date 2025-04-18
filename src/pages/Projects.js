@@ -12,6 +12,16 @@ const projects = [
     description: 'Description for project two.',
     githubLink: 'https://github.com/username/project-two',
   },
+  {
+    title: 'Youtube Clone App',
+    description: 'A yotube clone app with the replica of YouTube Ui/Ux made using Tailwind CSS and ReactJS, Axios for fetching the APIs, and Redux for state management',
+    githubLink: 'https://github.com/hrishikesh-madgundi/react-youtube-clone',
+  },
+  {
+    title: 'Project Two',
+    description: 'Description for project two.',
+    githubLink: 'https://github.com/username/project-two',
+  },
   // Add more projects here
 ];
 

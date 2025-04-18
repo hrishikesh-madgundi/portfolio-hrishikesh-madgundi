@@ -38,7 +38,7 @@ const Home = () => {
         <h1 className={`text-4xl font-bold animated-text ${!isTyping ? 'paused' : ''}`}>
           {phrases[textIndex]}
         </h1>
-        <p className="mt-4 text-lg text-black">Welcome to my Portfolio, I hope you didn't find me ugly ! Use the Navbar to know more about me</p>
+        <p className="mt-4 text-md text-black">Welcome to my Portfolio, I hope you didn't find me ugly ! Use the Navbar to know more about me</p>
       </div>
       {/* Profile Picture */}
       <div className="rounded-full border-gray-800 ml-8 ">

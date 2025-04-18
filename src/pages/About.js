@@ -17,7 +17,7 @@ const About = () => (
             <img
               src="https://media.licdn.com/dms/image/v2/D4D22AQGL9wXNiN05GQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1685352973563?e=1747267200&v=beta&t=rWVJwQnklbVciPjpPRVUPjN7O7c9hWgbmu22nOYA3dA"
               alt="Hrishikesh Madgundi"
-              className="object-cover w-full h-full"
+              className="object-cover justify-center"
             />
            
           </div>
@@ -36,8 +36,23 @@ const About = () => (
               When I'm not coding, you can find me exploring new tech trends or brainstorming new ideas to make the digital world more exciting.
             </p>
           </div>
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 mt-8">My Education</h2>
+          <div className="border-dashed border-2 border-black bg-white shadow-lg rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-700 mb-2">🎓 B.Tech in Computer Science and Education</h3>
+            <h3 className="text-xl text-gray-700 mb-2"> PCET's Nutan College of Engineering and Research</h3>
+            <p className="text-gray-600">📍 Pune</p>
+            <p className="text-gray-600">📅 2020 - 2024 </p>
+          </div>
+          <h2 className="text-4xl font-bold text-gray-800 mb-8 mt-8">My Resume</h2>
+          <a href="https://drive.google.com/file/d/1-SBEf7mzbSFF2AqQInIpQX-yIVKeVCbr/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <button class="w-full px-6 py-3 border-2 border-dashed border-2 border-black bg-white text-black font-semibold rounded-2xl transition duration-100 ease-in-out hover:bg-black hover:text-white hover:shadow-lg active:scale-95">
+          GO TO RESUME 📎
+          </button>
+          </a>
         </div>
       </div>
+
+      
 
       {/* Skills Section */}
       <div className="mt-16 text-center">
