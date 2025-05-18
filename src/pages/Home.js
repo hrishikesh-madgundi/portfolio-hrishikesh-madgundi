@@ -1,36 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import './Home.css'; // Import your CSS file for the animations.
+import React, { useState } from 'react';
+import './Home.css';
+import Home_Image from '../assets/Home_Image.jpeg';
+import Preloader from '../components/Preloader';
 
 const Home = () => {
+  const [loaded, setLoaded] = useState(false);
+
   const [textIndex, setTextIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
   const phrases = [
     "I'm Hrishikesh Madgundi!",
     'A Frontend Developer!',
     'A Backend Developer!',
-    'Fullstack Overall Hahaha!'
+    'Fullstack Overall Hahaha!',
   ];
 
-  useEffect(() => {
+  React.useEffect(() => {
+    if (!loaded) return;
+
     let typingTimeout;
     let pauseTimeout;
 
     if (isTyping) {
-      typingTimeout = setTimeout(() => {
-        setIsTyping(false);
-      }, 2500); // Adjust duration to match typing animation duration
+      typingTimeout = setTimeout(() => setIsTyping(false), 2500);
     } else {
       pauseTimeout = setTimeout(() => {
         setIsTyping(true);
-        setTextIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-      }, 1000); // Duration of the pause
+        setTextIndex((prev) => (prev + 1) % phrases.length);
+      }, 1000);
     }
 
     return () => {
       clearTimeout(typingTimeout);
       clearTimeout(pauseTimeout);
     };
-  }, [isTyping, textIndex]);
+  }, [isTyping, textIndex, loaded]);
+
+  if (!loaded) return <Preloader onFinish={() => setLoaded(true)} />;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 bg-white container">
@@ -38,15 +44,12 @@ const Home = () => {
         <h1 className={`text-4xl font-bold animated-text ${!isTyping ? 'paused' : ''}`}>
           {phrases[textIndex]}
         </h1>
-        <p className="mt-4 text-md text-black">Welcome to my Portfolio, I hope you didn't find me ugly ! Use the Navbar to know more about me</p>
+        <p className="mt-4 text-md text-black">
+          Welcome to my Portfolio, I hope you didn't find me ugly! Use the Navbar to know more about me
+        </p>
       </div>
-      {/* Profile Picture */}
-      <div className="rounded-full border-gray-800 ml-8 ">
-        <img
-          src="https://media.licdn.com/dms/image/v2/D4D03AQGnmEnlGNvt3w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692136924292?e=1749686400&v=beta&t=Vliy5GP2b3dSBPIxI2YgyxXvgoH8j1rXmqV6vqLfTIQ"
-          alt="Profile"
-          className="profile-picture border-dashed border-8 border-black" /* Updated className */
-        />
+      <div className="rounded-full border-gray-800 ml-8">
+        <img src={Home_Image} alt="Profile" className="profile-picture border-dashed border-8 border-black" />
       </div>
     </div>
   );

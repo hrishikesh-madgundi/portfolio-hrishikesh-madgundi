@@ -1,3 +1,4 @@
+import About_Image from '../assets/About_Image.jpeg'
 const About = () => (
   <section className="bg-gray-100 py-16">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +16,7 @@ const About = () => (
         <div className="w-full lg:w-1/2">
           <div className="border-dashed border-2 border-black relative rounded-lg shadow-lg overflow-hidden">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D22AQGL9wXNiN05GQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1685352973563?e=1747267200&v=beta&t=rWVJwQnklbVciPjpPRVUPjN7O7c9hWgbmu22nOYA3dA"
+              src={About_Image}
               alt="Hrishikesh Madgundi"
               className="object-cover justify-center"
             />
